@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WordCrawler</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./frontend/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./frontend/css/jqcloud.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+    <script type="text/javascript" src="./frontend/js/jqcloud.js"></script>
+    <script type="text/javascript" src="./frontend/js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">  
+      <h1 class="headline">Wanna know 100 most common words?
+        <small class="headline--small">Find out!</small>
+      </h1>
+      
+      <div class="form-container js-form">
+      <div class="form__label">Please provide url to the website you want to check</div>
+      <form class="form"> 
+        <div class="form__group">      
+          <input class="js-url" type="text" required>
+          <span class="input__highlight"></span>
+          <span class="input__bar"></span>
+          <label>Url</label>
+        </div>
+        <button id="submit" class="btn" form="js-submit">check</button>
+        <p class="form__msg" style="display: none">Incorect url, it should start with http or https</p>
+      </form>
+      </div>
+      <h2 class="cloud-results__headline headline js-clouds-head">Most common words at: </h2>
+      <div id="cloud-results" style="width: 450px; height: 600px;"></div>
+    </div>
+  </body>
+</html>
