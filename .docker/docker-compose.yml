@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  database:
+  image: mysql:5.7
+  restart: unless-stopped
+  container_name: database.dev
+  command: mysqld --user=root --verbose
+  volumes:
+    - ./db:/var/lib/mysql
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_DATABASE: "words"
+    MYSQL_ROOT_PASSWORD: ""
+    MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  web:
+    build:
+      dockerfile: .docker/Dockerfile
+      context: ..
+    restart: unless-stopped
+    command: python3 WebServer.py
+    working_dir: /usr/src/app
+    ports:
+      - "8888:8888"
+    depends_on:
+      - database
