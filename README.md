@@ -6,7 +6,7 @@
 3) Run pip install --no-cache-dir -r requirements.txt
 4) Edit Config.py (db_* fields)
 5) Run python3 WebServer.py
-6) *It is recommended to use above steps instead of Docker because some error appears*
+6) OR run "docker-compose build" and "docker-compose up"
 
 ## Safely keeping encryption keys
 - Use an external Hardware Security Module

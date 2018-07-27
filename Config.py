@@ -1,7 +1,7 @@
 Config = {
     # database
     'db_name': 'words',
-    'db_host': 'localhost',
+    'db_host': 'database',
     'db_user': 'root',
     'db_pass': '',
     'queue_rows_per_sec': 10,

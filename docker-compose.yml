@@ -15,11 +15,10 @@ services:
       MYSQL_ROOT_PASSWORD: ""
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
   web:
-    build:
-      dockerfile: .docker/Dockerfile
-      context: ..
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
     restart: unless-stopped
-    command: python3 WebServer.py
     working_dir: /usr/src/app
     ports:
       - "8888:8888"
